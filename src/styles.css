@@ -1,0 +1,940 @@
+/* styles.css */
+body {
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+}
+.projects {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    background-color: #000;
+}
+  
+  /* styles.css */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*background-image: url('C:\Users\Manaswini Battula\my-portfolio\public\images\Background2.jpg'); /* Use relative path */
+  background-size: cover;
+  background-position: center;
+  background-color: #000000;
+  height: 100vh;
+ /* Set opacity to 50% */
+}
+
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+  }
+  
+  
+  .invisible {
+    opacity: 0;
+  }
+  
+  .home {
+    position: relative;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+
+.big-font {
+  font-size: 4rem;
+  color: rgb(244, 244, 244);
+  text-align: right;
+  margin-top: -80px;
+  margin-bottom: 2px;
+  /*background-image: linear-gradient(45deg, #f0f, #0ff, #00f, #f00, rgb(203, 176, 24), rgb(200, 104, 30), #00f, rgb(56, 232, 44));*/
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: glitter 1.5s  linear;
+  font-family: 'Courier New', monospace;
+}
+
+
+
+/* ... rest of your styles ... */
+
+@keyframes reveal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+.profile-picture {
+  width: 300px;
+  height: 310px;
+  padding-bottom: 20px;
+  border-radius: 100%; /* Make the profile picture circular */
+}
+
+.contact-icons {
+  position: absolute;
+  bottom: -40px; /* Adjust vertical position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 44px;
+  margin: 0 5px;
+  color: #ffffff;
+}
+
+.profile-text {
+  text-align: right;
+}
+
+.green-box {
+  display: inline-block; /* Ensure the container only takes up the necessary width */
+  background-color: rgb(234, 115, 42); /* Set the background color of the green box */
+  padding: 10px; /* Add padding to create some space around the text */
+}
+
+.caption {
+  color: #4DC7A4;
+  font-weight: bold; /* Make text bold */
+  font-size: 20px; /* Adjust font size as needed */
+  font-family: cursive, sans-serif; /* Use cursive font with a fallback to sans-serif */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: reveal 2s ease forwards; /* Adjust the duration as needed */
+  font-style: italic;
+}
+/* NAVBAR */ 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: 'Courier New', monospace;
+  color: #fff; /* Text color */
+  background-color: #000; /* Background color */
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left .home-link {
+  margin-right: 10px; /* Add spacing between the Home icon and the name */
+  text-decoration: none;
+}
+
+.navbar-left .home-link svg {
+  vertical-align: middle;
+}
+
+.navbar-left .name {
+  color: #fff; /* White color for the name */
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar-left .name:hover {
+  text-decoration: underline;
+}
+
+.navbar-right {
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+}
+
+.separator {
+  margin: 0 5px;
+}
+
+
+
+ .footer {
+  background-color: #333; /* Background color */
+  color: white; /* Text color */
+  padding: 20px; /* Padding around the content */
+  text-align: center; /* Center-align text */
+  position: fixed; /* Stick the footer to the bottom of the viewport */
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
+}
+
+/* styles.css */
+/* styles.css */
+
+.project-balls {
+  position: absolute;
+  bottom: 50px;
+  left: 60%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.project-ball {
+  width: 130px;
+  height: 130px;
+  border-radius: 60%;
+  margin: 100px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.project-ball:hover {
+  transform: scale(1.2); /* Increase size on hover */
+}
+
+.project-ball:nth-child(1) {
+  background-color: #4DC7A4;
+  /* Coral color */
+  font-size: large;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none; /* Remove hyperlink underline */
+  transition: background-color 0.3s ease;
+  font-family: 'Courier New', monospace;
+}
+
+.project-ball:nth-child(2) {
+  background-color: rgb(238, 135, 67);;
+  /* Light Sky Blue color */
+  font-size: large;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+}
+
+.project-ball:nth-child(3) {
+  background-color: #c74dc1;
+  font-size: large;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none; /* Pale Green color */
+  font-family: 'Courier New', monospace;
+}
+
+.project-ball:nth-child(4) {
+  background-color: rgb(229, 238, 67);;
+  font-size: large;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none; /* Plum color */
+  font-family: 'Courier New', monospace;
+}
+.project-ball:nth-child(5) {
+  background-color: #6ebcda;
+  font-size: large;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none; /* Plum color */
+  font-family: 'Courier New', monospace;
+}
+
+.project-ball::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 4px solid transparent;
+  border-image: linear-gradient(45deg, #ff0, #f0f, #0ff, #ff0) 10;
+  border-image-slice: 1;
+  animation: glitter 2s linear infinite;
+}
+
+.appear {
+  animation: appear 0.5s ease-in-out forwards;
+}
+
+/* ... Existing keyframes and styles ... */
+
+
+
+/* ... Existing keyframes and styles ... */
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glitter {
+  0% {
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+
+.ball-label a {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none; /* Remove underline from the hyperlink */
+  display: block; /* Ensures that the entire area is clickable */
+}
+
+.ball-label a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+/* Add or modify the following styles in your existing CSS file */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Set your desired background color */
+  color: white; /* Set your desired text color */
+  text-align: center;
+  padding: 10px; /* Add padding for better appearance */
+}
+
+
+/* Add or modify the following styles in your existing CSS file */
+.developer-text {
+  color: #ffffff;
+  padding-right: 2px;
+  font-weight: bold;
+  text-align: right;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  font-size: 3rem; /* Adjust the font size as needed */
+  font-family: 'Courier New', monospace; /* Replace 'Your Fancy Font' with the desired font name */
+}
+
+.cursor {
+  color: white;
+  font-weight: bold;
+  animation: blinkCursor 1s infinite;
+  margin-left: 5px; /* Adjust the distance between text and cursor */
+}
+
+@keyframes blinkCursor {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ABout button */
+.about-button {
+  text-decoration: none;
+  font-weight: bold;
+  font-display: inherit;
+  font-size: 1em;
+  font-family: "poppins-medium", sans-serif;
+}
+
+.custom-button {
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: #ae5ca3; /* Green color */
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #b34cdc; /* Darker green color on hover */
+}
+/* styles.css */
+.black-background {
+  background-color: black;
+}
+
+/* RESUME */
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.resume-container {
+  text-align: center;
+  margin-top: -180px;
+}
+
+.resume-title {
+  font-size: 36px;
+  color: #fff; /* Change font color to white */
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease; /* Add fade-in animation */
+}
+
+.resume-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-icon {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease; /* Add fade-in-down animation */
+}
+
+.resume-message {
+  font-size: 20px;
+  color: #fff; /* Change font color to white */
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease; /* Add fade-in-up animation */
+}
+
+.resume-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4DC7A4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Courier New', monospace; /* Change font family to Courier Monospace */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  animation: slideIn 1s ease; /* Add slide-in animation */
+}
+
+.resume-button:disabled {
+  cursor: not-allowed;
+}
+
+.resume-button.success {
+  background-color: #66D37A;
+}
+
+.resume-button.success:disabled {
+  cursor: default;
+}
+
+.resume-button:hover {
+  background-color: #3AAE8C;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+/* styles.css */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  height: 100vh; /* Ensure content takes up full viewport height */
+}
+
+/* SKILLS STYLING */
+.projectsss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000; /* Background color */
+  color: #fff; /* Text color */
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 20px; /* Add padding */
+}
+
+.column {
+  background-color: #333; /* Column background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  width: calc(20% - 40px); /* Set column width */
+  min-width: 200px; /* Minimum column width */
+  text-align: center;
+  animation: fadeIn 0.5s ease; /* Apply fadeIn animation */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.column:hover {
+  transform: translateY(-5px); /* Add hover effect */
+}
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Add animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* EDUCATION.CSS */
+
+
+.projects4 {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: -10px;
+  background-color: #000;
+}
+.projects5 {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 150px;
+  background-color: #000;
+}
+.projectss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 20px; /* Add margin-top to move the content upwards */
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; 
+  animation: slideIn 0.5s ease-in-out; 
+}
+
+.education-logo {
+  width: 40px; 
+  height: auto;
+}
+
+.education-title {
+  color: white;
+  font-size: 28px; 
+  margin-left: 10px;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px); 
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.education-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.education-box {
+  background-color: #333;
+  border-radius: 10px;
+  margin: 0 10px;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.masters-column,
+.bachelors-column {
+  display: flex;
+  align-items: center;
+}
+
+.university-picture1,
+.university-picture2 {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.degree-info {
+  margin-left: 20px;
+}
+
+.white-text {
+  color: white;
+}
+
+.university {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.field {
+  font-style: italic;
+}
+
+.year {
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*PROJECTS*/
+/* body.blurred {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+} */
+.project-container {
+  max-width: 1200px; /* Set maximum width for the container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add padding around the container */
+  border: 2px solid #333; /* Add border to the container */
+  border-radius: 10px; /* Add border radius to the container */
+  background-color: #333; /* Add background color to the container */
+  gap:20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box shadow to the container */
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-item {
+  flex: 0 0 calc(50% - 10px); /* Adjust width to display two items per row */
+  margin-bottom: 20px; /* Adjust margin between projects */
+  transition: transform 0.3s ease;
+  max-width: 250px; /* Adjust maximum width of the project items */
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px; /* Reduce margin between rows */
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px; /* Add margin to separate from the navbar */
+}
+
+
+.project-link {
+  text-decoration: none;
+  color: #333; /* Customize link color */
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+  
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.project-details {
+  padding: 15px;
+  background-color: #f9f9f9; /* Background color for project details */
+  border: 1px solid #ddd; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  font-family: 'Courier New', Courier, monospace;
+  color: #333;
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.project-details h3 {
+  margin-top: 0;
+  font-family: 'Courier New', monospace; /* Font family */
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold;
+  color: #000;
+}
+
+.project-details p {
+  margin-bottom: 0;
+  font-family: 'Courier New', monospace; /* Font family */
+  font-size: 16px; /* Adjust font size */
+  color: #555;
+}
+
+.project-item:hover {
+  transform: scale(1.05); /* Enlarge the project on hover */
+}
+
+.project-item:hover .project-image {
+  transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+.project-item:hover .project-details {
+  background-color: #eee; /* Change background color on hover */
+}
+
+.project-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure the popup appears above other elements */
+}
+
+.project-popup-content {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #000;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: #999;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for color change */
+}
+
+.close-btn:hover {
+  background-color: #eee; /* Change background color on hover */
+  color: #555; /* Change text color on hover */
+}
+
+/* Add these styles to your CSS file */
+.certificates-container {
+  width: 120%; /* Adjust container width as needed */
+  margin: auto; /* Center the container */
+}
+
+.certificate-image {
+  width: 400px; /* Adjust the size of the images as needed */
+  margin: 50px; /* Add margin between images */
+  cursor: pointer; /* Add cursor pointer for clickable effect */
+}
+
+.enlarged-certificate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.enlarged-image {
+  width: 90%; /* Adjust the maximum width of the enlarged image */
+  height: 90%; /* Adjust the maximum height of the enlarged image */
+  padding-left: 50px;
+}
+
+.close-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 100px;
+  background: none;
+  border: none;
+  color: rgb(253, 55, 55);
+  cursor: pointer;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: Courier New, monospace;
+  padding: 20px;
+}
+
+.certifications-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.show-certifications-container {
+  text-align: center;
+}
+
+.show-certifications-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.show-certifications-link:hover {
+  background-color: #0056b3;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
